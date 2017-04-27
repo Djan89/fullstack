@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
-    Employee findBySidEquals(String firstName);
+    Employee findBySidEquals(String sid);
 
-    List<Employee> findByName(String firstName);
+    List<Employee> findByName(String name);
 
-    List<Employee> findByRole(String lastName);
+    List<Employee> findByRole(String role);
 }
