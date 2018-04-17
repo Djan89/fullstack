@@ -49,6 +49,5 @@
     "jsdom": "8.5.0",
     "npm-run-all": "1.8.0"
   },
-  "repository": {
-  }
+  "repository": {}
 }

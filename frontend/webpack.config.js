@@ -19,7 +19,8 @@ module.exports = {
         new CopyWebpackPlugin([{ from: PATHS.indexHtml, to: PATHS.dest}]),
         new webpack.DefinePlugin({
             'process.env':{
-                'NODE_ENV': JSON.stringify('production')
+                'NODE_ENV': JSON.stringify('production'),
+                'API_HOST': JSON.stringify('')
             }
         }),
         new webpack.optimize.UglifyJsPlugin({

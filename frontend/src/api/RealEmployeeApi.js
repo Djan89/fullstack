@@ -1,12 +1,14 @@
 import 'whatwg-fetch';
 
+const getApiUrl = uri => process.env.API_HOST + uri;
+
 class EmployeeApi {
     static getAllEmployees() {
-        return fetch('/api/employees', {method: 'get'}).then(response => response.json());
+        return fetch(getApiUrl('/api/employees'), {method: 'get'}).then(response => response.json());
     }
 
     static saveEmployee(employee) {
-        return fetch('/api/saveEmployee',
+        return fetch(getApiUrl('/api/saveEmployee'),
             {
                 method: 'post',
                 headers: new Headers({'Content-Type': 'application/json'}),
@@ -15,7 +17,7 @@ class EmployeeApi {
     }
 
     static deleteEmployee(id) {
-        return fetch('/api/deleteEmployee',
+        return fetch(getApiUrl('/api/deleteEmployee'),
             {
                 method: 'post',
                 headers: new Headers({'Content-Type': 'application/json'}),
